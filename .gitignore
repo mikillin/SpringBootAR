@@ -5,6 +5,7 @@
 *.jar
 *.sw?
 *~
+.idea
 .#*
 .*.md.html
 .DS_Store
