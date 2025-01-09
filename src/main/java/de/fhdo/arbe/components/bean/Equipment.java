@@ -14,9 +14,18 @@ public class Equipment   {
     private String title;
     private String code;
     private String information;
+    private boolean checked;
 
 
     public Equipment() {
+    }
+
+    public Equipment(Long id, String title, String code, String information, boolean checked) {
+        this.id = id;
+        this.title = title;
+        this.code = code;
+        this.information = information;
+        this.checked = checked;
     }
 
     public Equipment(Long id, String title, String code, String information) {
@@ -56,5 +65,13 @@ public class Equipment   {
 
     public void setInformation(String information) {
         this.information = information;
+    }
+
+    public boolean isChecked() {
+        return checked;
+    }
+
+    public void setChecked(boolean checked) {
+        this.checked = checked;
     }
 }

@@ -4,6 +4,7 @@ import de.fhdo.arbe.components.bean.Equipment;
 import de.fhdo.arbe.components.repository.EquipmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +13,7 @@ import java.util.Optional;
 
 
 
-@RestController
+@Controller
 @RequestMapping("/api/equipment")
 public class EquipmentController {
 
@@ -26,6 +27,7 @@ public class EquipmentController {
     }
 
     @GetMapping("/move")
+
     public String getMove(Model model) {
 
         model.addAttribute("equipments", equipmentRepository.findAll());

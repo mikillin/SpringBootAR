@@ -23,7 +23,8 @@ public class DataInitializer implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         equipmentRepository.saveAll(Arrays.asList(
-                new Equipment(1L, "Mikrokontroller", "MK-001", "Modul ESP32")
+                new Equipment(1L, "Mikrokontroller", "MK-001", "Modul ESP32"),
+                new Equipment(2L, "Kuli", "Do-001", "Model Schreiber")
         ));
 
         System.out.println("Sample data inserted into the test database.");
